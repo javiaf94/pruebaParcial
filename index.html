@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="./Vehiculo.js"></script>
+    <script type="text/javascript" src="./Auto.js"></script>    
+    <script type="text/javascript" src="./Camioneta.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="divAlta">
+        <input type="button" value="Alta" id="btnAlta">
+
+    </div>
+
+    <div id="divFiltros">
+        <div>
+            <label>Filtrar por:</label>
+            <select name="filtro" id= "selectFiltro">
+                <option value="Todos">Todos</option>
+                <option value="Autos">Autos</option>
+                <option value="Camionetas">Camionetas</option>
+            </select>
+        </div>
+        <div>
+            <label>Promedio de precios:</label>
+            <input type="number" id="numPromedio" disabled >            
+        </div>
+        <div>
+            <input type="button" id="btnPromedio" value="Calcular Promedio"> 
+        </div>     
+    </div>
+
+    <div id="divColumnas">
+        <label>Mostrar columnas:</label>
+        <label for="cboxID">ID</label>
+        <input type ="checkbox"  id="cboxID" checked>
+        <label for="cboxMarca">Marca</label>
+        <input type ="checkbox"  id="cboxMarca" checked>
+        <label for="cboxModelo">Modelo</label>
+        <input type ="checkbox"  id="cboxModelo"checked>
+        <label for="cboxPrecio">Precio</label>
+        <input type ="checkbox"  id="cboxPrecio"checked>
+
+    </div>
+
+
+    <div id="divContDatos" class="contenedorDatos" hidden="true">
+
+        <div id="divSalir">
+            <input type="button" value="x" id="btnSalir">            
+        </div>
+
+        <div>
+            <label for="txtid">ID</label>
+        </div>
+        <div id="divid">
+            <input type="text" id="txtid" disabled>
+        </div>
+
+        <div id="labelMarca">
+            <label for="txtMarca">Marca</label>
+        </div>
+        <div id="divMarca">
+            <input type="text" id="txtMarca">
+        </div>
+
+        <div id="labelModelo">
+            <label for="txtModelo">Modelo</label>
+        </div>
+        <div id="divModelo">
+            <input type="text" id="txtModelo">
+        </div>
+
+        <div>
+            <label for="numPrecio">Precio</label>
+        </div>
+        <div id="divPrecio">
+            <input type="number" id="numPrecio">
+        </div>
+
+        <div>
+            <label for="selectTipo">Tipo</label>
+        </div>
+        <div id="divTipoVehiculo">
+            
+            <select name="Tipo" id="selectTipo" >
+                <option value="Auto">Auto</option>
+                <option value="Camioneta">Camioneta</option>
+              </select>
+        </div>
+        <!-- 
+        <div>
+            <label for="txtFecha">Fecha Final</label>
+        </div>
+
+        <div id="divFecha">
+            <input type="date" id="txtFecha" form>
+        </div> 
+        -->
+        <div id="divTipos" hidden>
+            <label>Tipo Camioneta</label>
+        </div>
+
+        <div id="div4x4" hidden>
+            <input type="radio" id="radio4x4" name="tipo" value="4X4">      
+            <label for="radio4x4" id="label4x4">4X4</label>
+        </div>
+
+        <div id="divOtro" hidden>
+            <input type="radio" id="radioOtro" name="tipo" value="Otro">
+            <label for="radioOtro" id="labelOtro">Otro</label>
+        </div>
+
+        <div id="labelPuertas">
+            <label for="numPuertas">Cantidad de puertas</label>
+        </div>
+        <div id="divPuertas">
+            <input type="number" id="numPuertas">
+        </div>
+
+        <div id="divBotones">
+           <!--  <div>
+                <input type="button" value="Eliminar" id="btnEliminar">
+            </div> -->
+
+            <div>
+                <input type="button" value="Guardar" id="btnGuardar">
+            </div>
+
+        </div>
+        
+    </div>
+
+    <table id="tabla">
+        <thead>
+            <tr>
+                <th id="thID">Id</th>
+                <th id="thMarca">Marca</th>
+                <th id="thModelo">Modelo</th>
+                <th id="thPrecio">Precio</th>
+                <th>Tipo</th>
+                <th>Detalle</th>
+                <th>Accion</th>
+            </tr>
+        </thead>
+        <tbody id="tCuerpo">
+
+        </tbody>
+    </table>
+</body>
+</html>
